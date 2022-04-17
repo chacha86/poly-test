@@ -156,8 +156,9 @@ def print_one_article(article) :
 
 # ====================================================================
 def get_article_by_no(no) :
-      article = articles[no]
-      if article["no"] == no :
-          return article     
+    article = articles[no]
+    if article["no"] == no :
+        return article     
+
 
 # ====================================================================
