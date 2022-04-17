@@ -160,5 +160,4 @@ def get_article_by_no(no) :
     if article["no"] == no :
         return article     
 
-
 # ====================================================================
