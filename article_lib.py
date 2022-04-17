@@ -1,6 +1,7 @@
 no = 4
 articles = []
 # ====================================================================
+# 이부분은 문제 범위가 아닙니다. 
 def add_padding(pstr, width) :
     if str(type(pstr)) == "<class 'int'>" :
         pstr = str(pstr)
@@ -33,7 +34,7 @@ def print_article_list(articles) :
     f2("번호", "제목", "작성자", "작성일", "조회수")
     for a in articles :
         f2(a["no"], a["title"], a["writer"], str(a['regDate'])[:10], a['hit'])
-
+# 이부분은 문제 범위가 아닙니다. 
 # ====================================================================
 
 def print_help() :
@@ -65,17 +66,6 @@ def add_article() :
     no += 1
     
     print("게시물이 저장되었습니다.")
-    
-# ====================================================================
-def print_article_list(articles) :
-     for i in range(len(articles)):
-        article = articles[i]
-        print("번호 : {}".format(article["no"]))
-        print("제목 : {}".format(article["title"]))
-        print("작성자 : {}".format(article["writer"]))
-        print("등록날짜 : {}".format(article["regDate"]))
-        print("조회수 : {}".format(article["hit"]))
-        print("===================")
         
 # ====================================================================
 def update_article() :
