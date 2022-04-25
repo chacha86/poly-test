@@ -62,7 +62,7 @@ def add_article() :
     article = {"no" : no, "title" : title, "body" : body,
                "writer" : "익명", "hit" : 0, "regDate" : date}
     
-    articles.append(article)
+    _____________________
     no += 1
     
     print("게시물이 저장되었습니다.")
@@ -111,7 +111,14 @@ def delete_article() :
 # ====================================================================    
 # 함수 완성하기 2
 def search_article() :
-    keyword = input("검색 키워드를 입력해주세요 :") 
+    print("검색 키워드를 입력해주세요 :") # 디버깅1
+
+    ____________
+    for article in articles :
+        if keyword in article["title"] :
+            result.append(article)
+
+    print_article_list(result)
     
   
 # ====================================================================
@@ -143,16 +150,6 @@ def read_article() :
       
 # ====================================================================
 def print_one_article(article) :
-    print("==== {}번 게시물 ====".format(article["no"]))
-    print("번호 : {}".format(article["no"]))
-    print("제목 : {}".format(article["title"]))
-    print("-------------------")
-    print("내용 : {}".format(article["body"]))
-    print("-------------------")
-    print("작성자 : {}".format(article["writer"]))
-    print("등록날짜 : {}".format(article["regDate"]))
-    print("조회수 : {}".format(article["hit"]))
-    print("===================")
 
 # ====================================================================
 def get_article_by_no(no) :
