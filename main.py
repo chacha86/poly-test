@@ -1,19 +1,16 @@
 import article_lib as al
-
-# 1. 빈칸채우기1
-import _________________
+import member_lib as ml
 
 al.init()
 command = ""
     
 while command != "exit" :
-    # 빈칸 채우기2
-    if ________________ == None:
-        command = input("명령어: ") 
+    if ______________ == None:
+        command = input("명령어: ") # 함수
     else :
         command = input("명령어[{}({})]: ".
                         format(ml.logined_member["nickname"],
-                               ml.logined_member["login_id"])) 
+                               ml.logined_member["login_id"])) # 함수
     
     if command == "exit" :
         print("프로그램이 종료됩니다.")
@@ -25,10 +22,9 @@ while command != "exit" :
         al.add_article()
               
     elif command == "list" :
-
-        # 빈칸 채우기 3
-        al.print_article_list(____________)
-      
+        
+        al.print_article_list(al.articles)
+    
     elif command == "update" :
         al.update_article()
     
@@ -43,3 +39,10 @@ while command != "exit" :
         
     elif command == "login" :
         ml.login()        
+    
+    elif command == "search" :
+        al.search_article()        
+            
+            
+            
+       
