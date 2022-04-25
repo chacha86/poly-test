@@ -139,7 +139,7 @@ def read_article() :
     
     no = int(input("상세보기할 게시물 번호 :"))
   
-    article = get_article_by_no(no)    
+    article = _________________   
     
     if article != None :
         article["hit"] + 1
